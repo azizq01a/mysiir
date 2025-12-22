@@ -78,8 +78,26 @@ footer {
   background: #020617;
   margin-top: 40px;
 }
+.preview {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.screenshots {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.screenshots img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
