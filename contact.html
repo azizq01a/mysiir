@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Contact – mysiir</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="mobile-form">
+  <h2>📲 Contactez-nous</h2>
+  <p>Laissez votre message et nous vous répondrons rapidement</p>
 
-<section class="hero">
-  <h1>Contactez-nous</h1>
-  <p>Email : contact@mysiir.com</p>
+  <form>
+    <input type="text" placeholder="👤 Nom complet" required>
+    <input type="tel" placeholder="📞 Numéro de téléphone" pattern="[0-9]{8,15}" required>
+    <input type="email" placeholder="✉️ Email" required>
+    <select required>
+      <option value="">Type de demande</option>
+      <option>Organiser un match</option>
+      <option>Rejoindre un match</option>
+      <option>Partenariat</option>
+      <option>Autre</option>
+    </select>
+    <textarea placeholder="✍️ Votre message (facultatif)"></textarea>
+    <button type="submit">🚀 Envoyer</button>
+  </form>
 </section>
-
-</body>
-</html>
