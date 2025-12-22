@@ -1,207 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIIR – Sport Social App</title>
-
-  <!-- SEO -->
-  <meta name="description" content="SIIR est une application sportive sociale pour organiser des matchs, rencontrer des joueurs et jouer ensemble facilement." />
-  <meta name="keywords" content="sport, football, matchs, application sportive, sport social" />
-  <meta name="author" content="SIIR App" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: #0b0f14;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 25px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1e2633;
-    }
-
-    header h1 {
-      color: #00ff88;
-      font-size: 28px;
-      font-weight: 700;
-    }
-
-    nav a {
-      color: #ffffff;
-      margin-left: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      opacity: 0.8;
-    }
-
-    nav a:hover {
-      opacity: 1;
-    }
-
-    .hero {
-      padding: 100px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .hero h2 {
-      font-size: 52px;
-      margin-bottom: 20px;
-    }
-
-    .hero h2 span {
-      color: #00ff88;
-    }
-
-    .hero p {
-      font-size: 20px;
-      opacity: 0.85;
-      margin-bottom: 40px;
-    }
-
-    .hero a {
-      background: #00ff88;
-      color: #000;
-      padding: 15px 40px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    .hero a:hover {
-      background: #00cc6a;
-    }
-
-    .features {
-      background: #111722;
-      padding: 80px 20px;
-    }
-
-    .features h3 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 50px;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .feature {
-      background: #0b0f14;
-      padding: 30px;
-      border-radius: 15px;
-      border: 1px solid #1e2633;
-    }
-
-    .feature h4 {
-      color: #00ff88;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .cta {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .cta h3 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      font-size: 18px;
-      opacity: 0.85;
-      margin-bottom: 30px;
-    }
-
-    footer {
-      border-top: 1px solid #1e2633;
-      padding: 30px;
-      text-align: center;
-      opacity: 0.6;
-      font-size: 14px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>mysiir – Social Sports App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>SIIR</h1>
-    <nav>
-      <a href="#">Accueil</a>
-      <a href="#features">Fonctionnalités</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">mysiir</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="matches.html">Matchs</a>
+    <a href="app.html">Application</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h2>Play. Connect. <span>Compete.</span></h2>
-    <p>
-      SIIR est une application sportive sociale qui permet d’organiser facilement
-      des matchs, rencontrer des joueurs et vivre le sport autrement.
-    </p>
-    <a href="#">Télécharger l’application</a>
-  </section>
+<section class="hero">
+  <h1>Organisez vos matchs. Connectez votre communauté.</h1>
+  <p>mysiir est une application sociale dédiée au sport communautaire.</p>
+  <a class="btn" href="app.html">Découvrir l’application</a>
+</section>
 
-  <section class="features" id="features">
-    <h3>Fonctionnalités clés</h3>
+<section class="features">
+  <div class="card">
+    <h3>⚽ Organisation facile</h3>
+    <p>Créez et rejoignez des matchs en quelques clics.</p>
+  </div>
+  <div class="card">
+    <h3>👥 Communauté sportive</h3>
+    <p>Rencontrez des joueurs près de chez vous.</p>
+  </div>
+  <div class="card">
+    <h3>📍 Local & social</h3>
+    <p>Des matchs autour de vous, en temps réel.</p>
+  </div>
+</section>
 
-    <div class="feature-grid">
-      <div class="feature">
-        <h4>📅 Organisation de matchs</h4>
-        <p>Crée ou rejoins des matchs près de chez toi en quelques clics.</p>
-      </div>
-
-      <div class="feature">
-        <h4>👥 Communauté sportive</h4>
-        <p>Connecte-toi avec des joueurs partageant la même passion.</p>
-      </div>
-
-      <div class="feature">
-        <h4>📍 Géolocalisation</h4>
-        <p>Trouve des terrains et matchs autour de toi facilement.</p>
-      </div>
-
-      <div class="feature">
-        <h4>⚽ Multi-sports</h4>
-        <p>Football, futsal, basket et plus encore.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" id="contact">
-    <h3>Rejoins l’aventure SIIR</h3>
-    <p>Le sport devient social. Disponible bientôt sur Android et iOS.</p>
-    <a href="#">S’inscrire à la bêta</a>
-  </section>
-
-  <footer>
-    © 2025 SIIR App – Tous droits réservés
-  </footer>
+<footer>
+  <p>© 2025 mysiir – All rights reserved</p>
+</footer>
 
 </body>
 </html>
