@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>À propos – mysiir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">mysiir</div>
+</header>
+
+<section class="hero">
+  <h1>À propos de mysiir</h1>
+  <p>mysiir est une plateforme sociale pour organiser des matchs sportifs locaux.</p>
+</section>
+
+</body>
+</html>
