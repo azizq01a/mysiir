@@ -1,19 +1,36 @@
-<section class="mobile-form">
-  <h2>📲 Contactez-nous</h2>
-  <p>Laissez votre message et nous vous répondrons rapidement</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact – mysiir</title>
+<meta name="description" content="Contactez l'équipe de mysiir pour toute question ou support.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">mysiir</div>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="about.html">À propos</a>
+  <a href="matches.html">Matchs</a>
+  <a href="app.html">Application</a>
+  <a href="contact.html">Contact</a>
+</nav>
+</header>
 
-  <form>
-    <input type="text" placeholder="👤 Nom complet" required>
-    <input type="tel" placeholder="📞 Numéro de téléphone" pattern="[0-9]{8,15}" required>
-    <input type="email" placeholder="✉️ Email" required>
-    <select required>
-      <option value="">Type de demande</option>
-      <option>Organiser un match</option>
-      <option>Rejoindre un match</option>
-      <option>Partenariat</option>
-      <option>Autre</option>
-    </select>
-    <textarea placeholder="✍️ Votre message (facultatif)"></textarea>
-    <button type="submit">🚀 Envoyer</button>
-  </form>
+<section class="contact">
+<h2>Contactez-nous</h2>
+<form action="mailto:anouarmounir51@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Votre nom" required>
+<input type="email" name="email" placeholder="Votre email" required>
+<textarea name="message" placeholder="Votre message" required></textarea>
+<button type="submit">Envoyer</button>
+</form>
 </section>
+
+<footer>
+<p>© 2025 mysiir – Tous droits réservés</p>
+</footer>
+</body>
+</html>
