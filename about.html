@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>À propos – mysiir</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>À propos – mysiir</title>
+
+  <!-- SEO -->
+  <meta name="description" content="mysiir est une application sportive sociale qui permet d’organiser et rejoindre des matchs près de chez vous.">
+  <meta name="keywords" content="mysiir, sport social, football, matchs, application sportive">
+  <meta name="author" content="mysiir">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="À propos – mysiir">
+  <meta property="og:description" content="Découvrez la vision et la mission de mysiir.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mysiir.com/about.html">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 18px;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .timeline div {
+      background: #111;
+      padding: 25px;
+      border-radius: 15px;
+    }
+  </style>
 </head>
+
 <body>
-<header id="header">
+
+<header>
   <div class="logo">mysiir</div>
   <nav>
     <a href="index.html">Accueil</a>
@@ -18,15 +60,81 @@
   </nav>
 </header>
 
-<section class="content">
+<!-- HERO -->
+<section class="hero">
   <h1>À propos de mysiir</h1>
-  <p>mysiir est une plateforme qui permet aux amateurs de sport d'organiser et de rejoindre facilement des matchs communautaires.</p>
-  <p>Notre mission est de connecter les passionnés de sport autour de vous, avec simplicité et rapidité.</p>
+  <p>Le sport n’a jamais été aussi social.</p>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="section">
+  <h2>⚽ Qui sommes-nous ?</h2>
+  <p>
+    <strong>mysiir</strong> est une plateforme sportive sociale conçue pour connecter les passionnés de sport
+    autour de matchs réels, locaux et accessibles.
+    Notre objectif est simple : permettre à chacun d’organiser ou rejoindre un match en quelques secondes,
+    sans contraintes, sans intermédiaires.
+  </p>
+</section>
+
+<!-- MISSION -->
+<section class="section">
+  <h2>🚀 Notre mission</h2>
+  <p>
+    Nous croyons que le sport est un puissant moteur de lien social.
+    mysiir a été créé pour casser les barrières : manque de joueurs, manque d’organisation,
+    manque de visibilité.
+  </p>
+  <p>
+    Avec mysiir, tu ouvres l’application, tu trouves un match près de toi,
+    tu rejoins la communauté, et tu joues.
+  </p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <h2>🧠 Comment ça fonctionne ?</h2>
+
+  <div class="timeline">
+    <div>
+      <h3>📍 Trouve</h3>
+      <p>Découvre des matchs autour de ta position en temps réel.</p>
+    </div>
+    <div>
+      <h3>⚽ Crée</h3>
+      <p>Organise ton propre match en moins d’une minute.</p>
+    </div>
+    <div>
+      <h3>👥 Rejoins</h3>
+      <p>Invite des joueurs, discute et prépare le match.</p>
+    </div>
+    <div>
+      <h3>🔥 Joue</h3>
+      <p>Vis le sport autrement, plus simple, plus humain.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section">
+  <h2>💎 Nos valeurs</h2>
+  <p>• Simplicité</p>
+  <p>• Communauté</p>
+  <p>• Transparence</p>
+  <p>• Accessibilité</p>
+  <p>• Passion du sport</p>
+</section>
+
+<!-- CTA -->
+<section class="hero">
+  <h1>Rejoins la communauté mysiir</h1>
+  <p>Le terrain t’attend.</p>
+  <a class="btn" href="app.html">Découvrir l’application</a>
 </section>
 
 <footer>
   <p>© 2025 mysiir – All rights reserved</p>
 </footer>
-<script src="js/main.js"></script>
+
 </body>
 </html>
