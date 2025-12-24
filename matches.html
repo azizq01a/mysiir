@@ -2,32 +2,83 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Matchs – mysiir</title>
+  <title>Matchs sportifs – mysiir</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Découvrez et rejoignez des matchs sportifs près de chez vous avec mysiir. Football, futsal et sports communautaires.">
+  <meta name="keywords" content="mysiir, matchs sportifs, football local, sport social">
+  <meta name="author" content="mysiir">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Trouvez des matchs sportifs près de chez vous avec mysiir.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matchs – mysiir">
+  <meta property="og:description" content="Trouvez des matchs sportifs près de vous.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mysiir.com/matches.html">
+
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .filters {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin: 40px 0;
-      flex-wrap: wrap;
+    .container { max-width:1200px; margin:auto; padding:40px 20px; }
+    .filters { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:40px; }
+    .filters select, .filters input {
+      padding:12px;
+      border-radius:10px;
+      border:none;
+      background:#111;
+      color:#fff;
     }
-    select, input {
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
+    .matches-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
     }
     .match-card {
-      background: #111;
-      padding: 25px;
-      border-radius: 15px;
-      color: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      background:#0f0f0f;
+      border-radius:20px;
+      padding:25px;
+      transition:.3s;
+      position:relative;
     }
+    .match-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(0,0,0,.4);
+    }
+    .badge {
+      position:absolute;
+      top:15px;
+      right:15px;
+      background:#00ff99;
+      color:#000;
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:13px;
+      font-weight:bold;
+    }
+    .match-card h3 { margin-top:10px; }
+    .match-info { opacity:.85; margin:10px 0; }
+    .join-btn {
+      display:inline-block;
+      margin-top:15px;
+      padding:12px 18px;
+      border-radius:30px;
+      background:#00ff99;
+      color:#000;
+      font-weight:bold;
+    }
+    .stats {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:30px;
+      margin:80px 0;
+    }
+    .stat {
+      background:#111;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+    }
+    .stat h2 { font-size:40px; color:#00ff99; }
   </style>
 </head>
 
@@ -41,84 +92,4 @@
     <a href="matches.html">Matchs</a>
     <a href="app.html">Application</a>
     <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>🔥 Trouve ton match</h1>
-  <p>Recherche, filtre et rejoins des matchs en temps réel</p>
-</section>
-
-<!-- FILTERS -->
-<div class="filters">
-  <input type="text" id="searchInput" placeholder="🔍 Rechercher">
-  
-  <select id="sportFilter">
-    <option value="">⚽ Tous les sports</option>
-    <option value="Football">Football</option>
-    <option value="Basket">Basket</option>
-    <option value="Futsal">Futsal</option>
-  </select>
-
-  <select id="cityFilter">
-    <option value="">📍 Toutes les villes</option>
-    <option value="Oujda">Oujda</option>
-    <option value="Rabat">Rabat</option>
-    <option value="Casablanca">Casablanca</option>
-  </select>
-</div>
-
-<!-- MATCHES -->
-<section>
-  <div class="features" id="matchesContainer"></div>
-</section>
-
-<footer>
-  <p>© 2025 mysiir</p>
-</footer>
-
-<script>
-const matches = [
-  { sport: "Football", city: "Oujda", time: "Samedi 18:00", place: "Terrain Municipal", level: "Intermédiaire" },
-  { sport: "Basket", city: "Rabat", time: "Dimanche 16:00", place: "Salle Indoor", level: "Débutant" },
-  { sport: "Futsal", city: "Casablanca", time: "Vendredi 21:00", place: "City Sport", level: "Avancé" },
-  { sport: "Football", city: "Oujda", time: "Lundi 20:00", place: "Stade privé", level: "Débutant" }
-];
-
-const container = document.getElementById("matchesContainer");
-const searchInput = document.getElementById("searchInput");
-const sportFilter = document.getElementById("sportFilter");
-const cityFilter = document.getElementById("cityFilter");
-
-function renderMatches() {
-  container.innerHTML = "";
-
-  const filtered = matches.filter(m =>
-    (m.sport.includes(sportFilter.value) || sportFilter.value === "") &&
-    (m.city.includes(cityFilter.value) || cityFilter.value === "") &&
-    (m.sport.toLowerCase().includes(searchInput.value.toLowerCase()) ||
-     m.city.toLowerCase().includes(searchInput.value.toLowerCase()))
-  );
-
-  filtered.forEach(match => {
-    container.innerHTML += `
-      <div class="match-card">
-        <h3>⚽ ${match.sport} – ${match.city}</h3>
-        <p>🕒 ${match.time}</p>
-        <p>📍 ${match.place}</p>
-        <p>⭐ Niveau: ${match.level}</p>
-        <a class="btn">Rejoindre</a>
-      </div>
-    `;
-  });
-}
-
-searchInput.addEventListener("input", renderMatches);
-sportFilter.addEventListener("change", renderMatches);
-cityFilter.addEventListener("change", renderMatches);
-
-renderMatches();
-</script>
-
-</body>
-</html>
+  </
