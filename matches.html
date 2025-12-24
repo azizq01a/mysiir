@@ -2,26 +2,37 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Matchs sportifs – mysiir</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Découvrez et rejoignez des matchs sportifs près de chez vous avec mysiir. Football, basket, futsal et plus.">
-  <meta name="keywords" content="mysiir, matchs sportifs, football local, sport communautaire">
-  <meta name="author" content="mysiir">
+  <title>Matchs – mysiir</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Matchs sportifs – mysiir">
-  <meta property="og:description" content="Trouvez et rejoignez des matchs sportifs autour de vous.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mysiir.com/matches.html">
-
+  <meta name="description" content="Trouvez des matchs sportifs près de chez vous avec mysiir.">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .filters {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    select, input {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    .match-card {
+      background: #111;
+      padding: 25px;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
   <div class="logo">mysiir</div>
   <nav>
@@ -33,164 +44,81 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
-  <h1>Matchs sportifs près de chez vous</h1>
-  <p>Rejoignez des joueurs, créez des équipes et vivez le sport autrement.</p>
-  <a href="app.html" class="btn">📲 Télécharger l’application</a>
+  <h1>🔥 Trouve ton match</h1>
+  <p>Recherche, filtre et rejoins des matchs en temps réel</p>
 </section>
 
-<!-- ================= FILTERS ================= -->
+<!-- FILTERS -->
+<div class="filters">
+  <input type="text" id="searchInput" placeholder="🔍 Rechercher">
+  
+  <select id="sportFilter">
+    <option value="">⚽ Tous les sports</option>
+    <option value="Football">Football</option>
+    <option value="Basket">Basket</option>
+    <option value="Futsal">Futsal</option>
+  </select>
+
+  <select id="cityFilter">
+    <option value="">📍 Toutes les villes</option>
+    <option value="Oujda">Oujda</option>
+    <option value="Rabat">Rabat</option>
+    <option value="Casablanca">Casablanca</option>
+  </select>
+</div>
+
+<!-- MATCHES -->
 <section>
-  <h2>🔍 Filtrer les matchs</h2>
-
-  <div class="features">
-    <div class="card">
-      <h3>📍 Ville</h3>
-      <p>Oujda, Rabat, Casablanca, Marrakech</p>
-    </div>
-
-    <div class="card">
-      <h3>⚽ Sport</h3>
-      <p>Football, Futsal, Basket, Tennis</p>
-    </div>
-
-    <div class="card">
-      <h3>📅 Date</h3>
-      <p>Aujourd’hui, Cette semaine</p>
-    </div>
-  </div>
+  <div class="features" id="matchesContainer"></div>
 </section>
 
-<!-- ================= MATCH LIST ================= -->
-<section>
-  <h2>🔥 Matchs populaires</h2>
-
-  <div class="features">
-
-    <!-- MATCH CARD 1 -->
-    <div class="card">
-      <h3>⚽ Football – Oujda</h3>
-      <p><strong>Date :</strong> Samedi 18:00</p>
-      <p><strong>Lieu :</strong> Terrain Municipal</p>
-      <p><strong>Joueurs :</strong> 8 / 10</p>
-      <p><strong>Niveau :</strong> Intermédiaire</p>
-      <a class="btn">Rejoindre</a>
-    </div>
-
-    <!-- MATCH CARD 2 -->
-    <div class="card">
-      <h3>🏀 Basket – Rabat</h3>
-      <p><strong>Date :</strong> Dimanche 16:00</p>
-      <p><strong>Lieu :</strong> Salle Indoor</p>
-      <p><strong>Joueurs :</strong> 6 / 10</p>
-      <p><strong>Niveau :</strong> Débutant</p>
-      <a class="btn">Rejoindre</a>
-    </div>
-
-    <!-- MATCH CARD 3 -->
-    <div class="card">
-      <h3>⚽ Futsal – Casablanca</h3>
-      <p><strong>Date :</strong> Vendredi 21:00</p>
-      <p><strong>Lieu :</strong> City Sport</p>
-      <p><strong>Joueurs :</strong> 9 / 10</p>
-      <p><strong>Niveau :</strong> Avancé</p>
-      <a class="btn">Rejoindre</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= UPCOMING ================= -->
-<section>
-  <h2>📆 Matchs à venir</h2>
-
-  <div class="features">
-
-    <div class="card">
-      <h3>⚽ Football – Nador</h3>
-      <p>Lundi • 19:00</p>
-      <p>Terrain privé</p>
-    </div>
-
-    <div class="card">
-      <h3>🏐 Volley – Agadir</h3>
-      <p>Mardi • 17:30</p>
-      <p>Plage</p>
-    </div>
-
-    <div class="card">
-      <h3>🎾 Tennis – Fès</h3>
-      <p>Jeudi • 15:00</p>
-      <p>Club sportif</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= HOW IT WORKS ================= -->
-<section>
-  <h2>⚙️ Comment ça marche ?</h2>
-
-  <div class="features">
-    <div class="card">
-      <h3>1️⃣ Inscris-toi</h3>
-      <p>Crée ton profil en moins d’une minute.</p>
-    </div>
-
-    <div class="card">
-      <h3>2️⃣ Trouve un match</h3>
-      <p>Filtre selon ta ville et ton sport préféré.</p>
-    </div>
-
-    <div class="card">
-      <h3>3️⃣ Joue & partage</h3>
-      <p>Rencontre des joueurs et crée ta communauté.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= COMMUNITY ================= -->
-<section>
-  <h2>👥 La communauté mysiir</h2>
-  <p>
-    Des milliers de joueurs utilisent mysiir chaque semaine
-    pour organiser leurs matchs et rencontrer de nouveaux partenaires.
-  </p>
-
-  <div class="features">
-    <div class="card">
-      <h3>🌍 Multi-villes</h3>
-      <p>Présent dans plusieurs villes du Maroc.</p>
-    </div>
-
-    <div class="card">
-      <h3>⭐ Profils vérifiés</h3>
-      <p>Une communauté sérieuse et active.</p>
-    </div>
-
-    <div class="card">
-      <h3>📈 En croissance</h3>
-      <p>La plateforme sportive qui monte.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="hero">
-  <h1>Prêt à jouer ?</h1>
-  <p>Télécharge mysiir et rejoins ton prochain match dès aujourd’hui.</p>
-  <a href="app.html" class="btn">🚀 Commencer maintenant</a>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer>
-  <p>© 2025 mysiir – Tous droits réservés</p>
-  <p>
-    <a href="privacy.html">Politique de confidentialité</a> •
-    <a href="contact.html">Contact</a>
-  </p>
+  <p>© 2025 mysiir</p>
 </footer>
+
+<script>
+const matches = [
+  { sport: "Football", city: "Oujda", time: "Samedi 18:00", place: "Terrain Municipal", level: "Intermédiaire" },
+  { sport: "Basket", city: "Rabat", time: "Dimanche 16:00", place: "Salle Indoor", level: "Débutant" },
+  { sport: "Futsal", city: "Casablanca", time: "Vendredi 21:00", place: "City Sport", level: "Avancé" },
+  { sport: "Football", city: "Oujda", time: "Lundi 20:00", place: "Stade privé", level: "Débutant" }
+];
+
+const container = document.getElementById("matchesContainer");
+const searchInput = document.getElementById("searchInput");
+const sportFilter = document.getElementById("sportFilter");
+const cityFilter = document.getElementById("cityFilter");
+
+function renderMatches() {
+  container.innerHTML = "";
+
+  const filtered = matches.filter(m =>
+    (m.sport.includes(sportFilter.value) || sportFilter.value === "") &&
+    (m.city.includes(cityFilter.value) || cityFilter.value === "") &&
+    (m.sport.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+     m.city.toLowerCase().includes(searchInput.value.toLowerCase()))
+  );
+
+  filtered.forEach(match => {
+    container.innerHTML += `
+      <div class="match-card">
+        <h3>⚽ ${match.sport} – ${match.city}</h3>
+        <p>🕒 ${match.time}</p>
+        <p>📍 ${match.place}</p>
+        <p>⭐ Niveau: ${match.level}</p>
+        <a class="btn">Rejoindre</a>
+      </div>
+    `;
+  });
+}
+
+searchInput.addEventListener("input", renderMatches);
+sportFilter.addEventListener("change", renderMatches);
+cityFilter.addEventListener("change", renderMatches);
+
+renderMatches();
+</script>
 
 </body>
 </html>
